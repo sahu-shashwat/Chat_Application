@@ -1,6 +1,6 @@
 # Chat_Application
  
-steps to setup
+steps to Run
 
 1. clone the repo or download the zip file
 2. Go to Chat_Application folder
