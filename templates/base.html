@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+  </head>
+  <style>
+    .chat-message {
+      width: 100%;
+      border: 3px solid #9ce3f0;
+      border-radius: 6px;
+      background-color: #9ce3f0;
+      margin: 5px 0px;
+      padding-bottom:3px;
+      padding-left:5px;
+      padding-right:5px;
+      
+      
+    }
+    .card{
+      max-width: initial;
+
+    }
+    .card-block{
+      padding: 28px 20px;
+    }
+    .jumbotron{
+      background-color: white;
+    }
+  
+  </style>
+  <body>
+    {% block header%}
+    <div class="alert alert-danger" role="alert">
+        Hi <b>{{ user.username }}</b>, Welcome to Chatapp
+      </div>
+      <br/>
+      <div class="button">
+      {% if user.is_authenticated %}
+
+      {% else %}
+      {% endif %}
+  
+      {% endblock %}
+      </div>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>
