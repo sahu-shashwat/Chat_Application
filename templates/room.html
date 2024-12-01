@@ -63,7 +63,7 @@
     const roomName = JSON.parse(document.getElementById('room_slug').textContent);
     const chatSocket = new WebSocket("ws://" + window.location.host + "/ws/" + roomName + "/");
 
-    chatSocket.onopen = function (e) {
+    chatSocket.onopen = function () {
       console.log("The connection was setup successfully !");
     };
     
@@ -91,8 +91,6 @@
           username: "{{ request.user.username }}",
           room_name: "{{ room_name }}"
         }));
-
-
         document.querySelector("#my_input").value = "";
       }
     };
